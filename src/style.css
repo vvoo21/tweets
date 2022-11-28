@@ -6,6 +6,7 @@
   --primary: hsl(235, 19%, 35%);
   --shadow: hsl(0, 0%, 86%);
   --bg-color: hsl(216, 88%, 53%);
+  --error: hsl(0, 100%, 63%);
 }
 
 * {
@@ -37,9 +38,10 @@ main {
   width: 90%;
   max-width: 600px;
   position: absolute;
-  top: 50%;
+  top: 400px;
   left: 50%;
   transform: translate(-50%, -50%);
+  min-height: 380px;
 }
 
 header {
@@ -47,8 +49,6 @@ header {
   border-radius: 0 0 0 50px;
   color: var(--light);
   padding: 1rem;
-  width: 100%;
-  max-width: 600px;
   margin-bottom: 2rem;
 }
 
@@ -57,7 +57,7 @@ header {
   font-weight: bold;
 }
 
-.tweets-container-create-form {
+#form {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -77,7 +77,7 @@ header {
   font-size: 1.2rem;
 }
 
-.tweets-container-create-form-button {
+.submit-button {
   width: 80px;
   border-radius: 24px;
   padding: 0.5rem;
@@ -92,12 +92,14 @@ header {
 
 .tweets-container-list {
   margin-top: 2rem;
+  border-radius: 5px 5px 0 0;
+  box-shadow: 3px 3px 10px;
+  background-color: var(--light);
 }
 
 .tweets-list {
-  background-color: var(--light);
-  border-radius: 5px 5px 0 0;
-  box-shadow: 3px 3px 10px;
+  max-height: 325px;
+  overflow-y: auto;
 }
 
 .tweets-list-item {
@@ -113,4 +115,14 @@ header {
 .tweets-list-item-text {
   font-size: 1.1rem;
   font-weight: 400;
+  width: 85%;
+}
+
+.error {
+  color: var(--light);
+  background-color: var(--error);
+  padding: 0.5rem;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
 }
