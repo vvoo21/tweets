@@ -120,9 +120,10 @@ header {
 
 .error {
   color: var(--light);
+  text-align: center;
   background-color: var(--error);
   padding: 0.5rem;
   border-radius: 5px;
-  font-size: 0.9rem;
+  font-size: 1rem;
   margin-top: 0.5rem;
 }
